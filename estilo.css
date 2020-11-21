@@ -54,3 +54,17 @@ section{
     height: 50%;
     transform: translate(50%, 50%);
 }
+
+/*MENSAGEM DE ALERTA*/
+
+.msg-sucesso{
+    width: 50%;
+    
+}
+.msg-erro h1{
+    color: aqua;
+}
+/*AREA PRIVADA*/
+div.area-privada{
+    background-image: url(img/fundo-cadastro.jpg);
+}

@@ -1,3 +1,10 @@
+<?php
+
+require_once 'usuarios.php';
+$u = new Usuario;
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,8 +34,28 @@
 // 3 - ENVIAR DADOS COLHIDOS PARA A CLASSE, FUNÇÃO CADASTRAR 
 // 4 - VERIFICAR O RETORNO FALSE OU TRUE 
 
-if(isset($_POST['nome'])) {
+if(isset($_POST['email'])) {
 
+    $email = addslashes($_POST['email']);
+    $senha = addslashes($_POST['senha']);
+    
+    if (!empty($email) && !empty($senha)) {
+        $u->conectar("projeto_login","localhost","root","");
+        if ($u->msgErro == "") {
+            if ($u->logar($email,$senha)) {
+                header("location: areaprivada.php");
+            }
+            else {
+                echo "Email e/ou senha estão incorretos!";
+            }
+        }
+        else {
+            echo "Erro:" .$u->msgErro;
+        }
+    }
+    else {
+        echo "Preencha todos os campos!";
+    }
 }
 
 ?>

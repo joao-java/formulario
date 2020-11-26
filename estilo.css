@@ -8,7 +8,7 @@
 }
 
 input{
-    display: block;
+   display: block;
     width: 90%;
     height: 2.5rem;
     line-height: 100%;
@@ -20,7 +20,7 @@ input{
 }
 
 input[type="submit"]{
-    background: #ff1966;
+    background: #DF0100;
     margin-left: 5%;
     margin-bottom: 2rem;
     cursor: pointer;
@@ -41,8 +41,8 @@ a{
 
 
 body{
-    background-image: url(img/fundo-cadastro.jpg);
-    background-position: 52% 60%;
+    background-image: url(img/agora.jpg);
+    background-position: 55% 50%;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -58,13 +58,27 @@ section{
 /*MENSAGEM DE ALERTA*/
 
 .msg-sucesso{
-    width: 50%;
-    
+    color: #fff;
+    background: rgba(250,128, 114,.3);
+    position: absolute;
+    width: 40%;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
 }
-.msg-erro h1{
-    color: aqua;
+.msg-erro{  
+    color: #fff;
+    background: rgba(250,128, 114,.3);
+    position: absolute;
+    width: 40%;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
 }
+
 /*AREA PRIVADA*/
 div.area-privada{
-    background-image: url(img/fundo-cadastro.jpg);
+    background-image: url(img/fundo-1.jpg);
 }

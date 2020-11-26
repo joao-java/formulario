@@ -9,7 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="1estilo.css">
     <title>Formulario</title>
 </head>
 <body>
@@ -27,6 +28,13 @@
     </form>
     
     </section>
+
+    <aside class="aside">
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="formulario.php">Login</a></li>
+            <li><a href="cadastrar.php">cadastrar</a></li>
+    </aside>
+
 <?php
 //verificar se clicou no botao 
 if(isset($_POST['nome'])) {
@@ -43,14 +51,14 @@ if(isset($_POST['nome'])) {
                 if($u->cadastrar($nome,$telefone,$email,$senha)) {
                     ?>
                     <div class="msg-sucesso">
-                        <h1> Cadastrado com sucesso ! acesse para entrar! </h1>
+                        Cadastrado com sucesso ! acesse para entrar!
                     </div>
                     <?php
                 }
                 else {
                     ?>
                     <div class="msg-erro">
-                        <h1> Email ja cadastrado ! </h1>
+                         Email ja cadastrado ! 
                     </div>
                     <?php
                 }
@@ -74,7 +82,7 @@ if(isset($_POST['nome'])) {
     else {
         ?>
         <div class="msg-erro">
-            <h1> Preencha todos os campos!! </h1>
+            Preencha todos os campos!!
         </div>
         <?php
     }

@@ -10,7 +10,8 @@ $u = new Usuario;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="1estilo.css">
     <title>Formulario</title>
 </head>
 <body>
@@ -25,6 +26,12 @@ $u = new Usuario;
     </form>
     
     </section>
+
+    <aside class="aside">
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="formulario.php">Login</a></li>
+            <li><a href="cadastrar.php">cadastrar</a></li>
+    </aside>
 </body>
 </html>
 <?php
